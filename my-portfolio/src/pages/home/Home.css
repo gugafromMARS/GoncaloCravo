@@ -5,6 +5,17 @@
   height: 100vh;
 }
 
+.color__block {
+  position: fixed;
+  height: 200%;
+  width: 100%;
+  background-color: var(--first-color);
+  top: -100%;
+  right: -74%;
+  transform: rotate(-30deg);
+  z-index: -1;
+}
+
 .home__img {
   object-fit: cover;
   border-radius: 30px;
@@ -60,15 +71,4 @@
 .button__icon {
   padding: 5px;
   color: var(--text-white);
-}
-
-.color__block {
-  position: fixed;
-  height: 200%;
-  width: 100%;
-  background-color: var(--first-color);
-  top: -100%;
-  right: -74%;
-  transform: rotate(-30deg);
-  z-index: -1;
 }

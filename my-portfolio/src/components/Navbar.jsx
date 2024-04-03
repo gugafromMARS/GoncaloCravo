@@ -3,8 +3,12 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function Navbar({ colorChange }) {
   const [showMenu, setShowMenu] = useState(false);
+
+  function handleState() {
+    setShowMenu((prevState) => !prevState);
+  }
 
   return (
     <nav className="nav">
@@ -18,7 +22,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     isActive ? "nav__link active-nav" : "nav__link"
                   }
-                  onClick={() => setShowMenu(!showMenu)}
+                  onClick={handleState}
                 >
                   {icon}
                   <h3 className="nav__name">{name}</h3>
@@ -30,7 +34,7 @@ export default function Navbar() {
       </div>
       <div
         className={`${showMenu ? "nav__toggle animate-toggle" : "nav__toggle"}`}
-        onClick={() => setShowMenu(!showMenu)}
+        onClick={handleState}
       >
         <span></span>
         <span></span>

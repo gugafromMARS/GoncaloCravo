@@ -35,88 +35,38 @@ export const links = [
 export const personalInfo = [
   {
     id: 1,
-    title: "First Name : ",
-    description: "Steve",
+    title: "Name : ",
+    description: "Gonçalo Cravo",
   },
 
   {
     id: 2,
-    title: "Last Name : ",
-    description: "Milner",
-  },
-
-  {
-    id: 3,
     title: "Age : ",
     description: "27 Years",
   },
 
   {
-    id: 4,
+    id: 3,
     title: "Nationality : ",
-    description: "Tunisian",
+    description: "Portuguese",
+  },
+
+  {
+    id: 4,
+    title: "Address : ",
+    description: "Aveiro, Portugal",
   },
 
   {
     id: 5,
-    title: "Freelance : ",
-    description: "Available",
+    title: "Email : ",
+    description: "goncaloscravo@gmail.com",
   },
 
   {
     id: 6,
-    title: "Address : ",
-    description: "Tunis",
-  },
-
-  {
-    id: 7,
-    title: "Phone : ",
-    description: "+21621184010",
-  },
-
-  {
-    id: 8,
-    title: "Email : ",
-    description: "you@mail.com",
-  },
-
-  {
-    id: 9,
-    title: "Skype : ",
-    description: "steve.milner",
-  },
-
-  {
-    id: 10,
-    title: "Langages : ",
-    description: "French, English",
-  },
-];
-
-export const stats = [
-  {
-    id: 1,
-    no: "12+",
-    title: "Years of <br /> Experience",
-  },
-
-  {
-    id: 2,
-    no: "97+",
-    title: "Completed <br /> Projects",
-  },
-
-  {
-    id: 3,
-    no: "81+",
-    title: "Happy <br /> Customers",
-  },
-
-  {
-    id: 4,
-    no: "53+",
-    title: " Awards <br /> Won",
+    title: "Languages : ",
+    description: "Portuguese, English",
   },
 ];
 
@@ -180,49 +130,49 @@ export const skills = [
   {
     id: 1,
     title: "Html",
-    percentage: "25",
+    img: "https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg",
   },
 
   {
     id: 2,
-    title: "Javascript",
-    percentage: "89",
+    title: "Css",
+    img: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg",
   },
 
   {
     id: 3,
-    title: "Css",
-    percentage: "70",
+    title: "Javascript",
+    img: "https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg",
   },
 
   {
     id: 4,
-    title: "Php",
-    percentage: "66",
+    title: "React",
+    img: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",
   },
 
   {
     id: 5,
-    title: "Wordpress",
-    percentage: "95",
+    title: "Java",
+    img: "https://www.vectorlogo.zone/logos/java/java-vertical.svg",
   },
 
   {
     id: 6,
-    title: "Jquery",
-    percentage: "50",
+    title: "Spring Boot",
+    img: "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
   },
 
   {
     id: 7,
-    title: "Angular",
-    percentage: "65",
+    title: "Docker",
+    img: "https://www.vectorlogo.zone/logos/docker/docker-icon.svg",
   },
 
   {
     id: 8,
-    title: "React",
-    percentage: "45",
+    title: "MySql",
+    img: "https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg",
   },
 ];
 

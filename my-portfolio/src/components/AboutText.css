@@ -1,0 +1,7 @@
+.personalText {
+  height: 300px;
+  color: var(--text-white);
+  background-color: var(--first-color);
+  border-radius: 2%;
+  padding: 20px;
+}
