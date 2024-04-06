@@ -82,3 +82,26 @@
       0 0 60px rgba(30, 132, 242, 1);
   }
 }
+
+.education {
+  margin-top: 100px;
+}
+
+.linkedin {
+  height: 40px;
+  width: 70px;
+}
+
+.github {
+  height: 40px;
+  width: 50px;
+}
+
+.links-grid {
+  display: flex;
+}
+
+.cv-btn {
+  padding: 15px 20px;
+  height: 50px;
+}

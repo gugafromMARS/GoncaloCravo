@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
 
-export default function Navbar({ colorChange }) {
+export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
   function handleState() {

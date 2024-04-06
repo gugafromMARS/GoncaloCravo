@@ -1,8 +1,9 @@
 import Photo from "../../assets/edited.jpg";
-import Photo2 from "../../assets/edited1.jpg";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import { BackgroundGradient } from "../ui/background-gradient";
+import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
+import { welcome } from "../../data";
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
         <div className="home__data">
           <h1 className="home__tittle">
             Hi!
-            <span> I'm Gonçalo Cravo. </span>
-            Junior Backend Developer🧑🏻‍💻
+            <p> I'm Gonçalo Cravo. </p>
+            <TypewriterEffectSmooth words={welcome} className="mt-0 " />
           </h1>
           <p className="home__description">
             I have a bachelor's degree in Business Management, but I changed

@@ -5,6 +5,9 @@ import "./About.css";
 import { motion } from "framer-motion";
 import { LampContainer } from "../ui/lamp";
 import Skills from "../../components/Skills";
+import Education from "../education/Education";
+import gitIcon from "../../assets/github-mark-white.svg";
+import LinkedinIcon from "../../assets/LinkedIn_icon.svg";
 
 export default function About() {
   return (
@@ -31,9 +34,26 @@ export default function About() {
             <ul className="info__list grid">
               <Info />
             </ul>
-            <a href={CV} download="" className="button">
-              Download CV
-            </a>
+            <div className="links-grid">
+              <a
+                href="https://www.linkedin.com/in/goncaloscravo/"
+                target="_blank"
+              >
+                <img
+                  src={LinkedinIcon}
+                  alt="linkedin"
+                  className="linkedin mb-4 mr-6"
+                />
+                Linkedin
+              </a>
+              <a href="https://github.com/gugafromMARS" target="_blank">
+                <img src={gitIcon} alt="github" className="github mb-4" />
+                Github
+              </a>
+              <a href={CV} download="" className="button cv-btn ml-8 mt-10">
+                Download CV
+              </a>
+            </div>
           </div>
 
           <div className="aboutText">
@@ -49,6 +69,12 @@ export default function About() {
         </div>
       </section>
       <div className="separator"></div>
+      <section className="resume">
+        <h2 className="section__subtitle subtitle_center sign">Education</h2>
+        <div className="education">
+          <Education />
+        </div>
+      </section>
     </main>
   );
 }

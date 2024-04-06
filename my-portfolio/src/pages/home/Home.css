@@ -35,8 +35,12 @@
   line-height: 1.24;
 }
 
-.home__tittle span {
+.home__tittle p {
   color: var(--first-color);
+}
+
+.home__tittle span {
+  font-weight: 500;
 }
 
 .home__description {
