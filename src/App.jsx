@@ -12,8 +12,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/GoncaloCravo" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="portfolio" element={<Portfolio />} />
+        <Route path="/GoncaloCravo/about" element={<About />} />
+        <Route path="/GoncaloCravo/portfolio" element={<Portfolio />} />
       </Routes>
       <ScrollToTop />
     </BrowserRouter>
