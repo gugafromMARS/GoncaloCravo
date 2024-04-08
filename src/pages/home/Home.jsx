@@ -7,7 +7,7 @@ import { welcome } from "../../data";
 
 export default function Home() {
   return (
-    <section className="home seciton grid">
+    <section className="home section grid">
       <BackgroundGradient className=" p-4">
         <img src={Photo} alt="" className="home__img" />
       </BackgroundGradient>

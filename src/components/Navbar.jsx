@@ -1,6 +1,6 @@
 import { links } from "../data.jsx";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -22,7 +22,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     isActive ? "nav__link active-nav" : "nav__link"
                   }
-                  onClick={handleState}
+                  onClick={() => setShowMenu(!showMenu)}
                 >
                   {icon}
                   <h3 className="nav__name">{name}</h3>
@@ -34,7 +34,7 @@ export default function Navbar() {
       </div>
       <div
         className={`${showMenu ? "nav__toggle animate-toggle" : "nav__toggle"}`}
-        onClick={handleState}
+        onClick={() => setShowMenu(!showMenu)}
       >
         <span></span>
         <span></span>
