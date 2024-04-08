@@ -23,7 +23,7 @@ export default function Home() {
             careers with a Java Backend Bootcamp.
           </p>
 
-          <Link to="/about" className="button">
+          <Link to="/GoncaloCravo/about" className="button">
             About Me{" "}
           </Link>
         </div>

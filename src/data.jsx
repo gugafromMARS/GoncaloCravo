@@ -14,21 +14,21 @@ export const links = [
     id: 1,
     name: "Home",
     icon: <FaHome className="nav__icon" />,
-    path: "/",
+    path: "/GoncaloCravo",
   },
 
   {
     id: 2,
     name: "About",
     icon: <FaUser className="nav__icon" />,
-    path: "/about",
+    path: "/GoncaloCravo/about",
   },
 
   {
     id: 3,
     name: "Portfolio",
     icon: <FaFolderOpen className="nav__icon" />,
-    path: "/portfolio",
+    path: "/GoncaloCravo/portfolio",
   },
 ];
 
