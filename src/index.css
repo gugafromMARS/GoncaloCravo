@@ -165,4 +165,37 @@
       margin-top: 150px;
     }
   }
+
+  @media (max-width: 500px) {
+    .projects {
+      padding: 70px;
+      margin-top: 0px;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .nav__toggle {
+      top: 20px;
+      right: 20px;
+    }
+
+    .home__content {
+      max-width: 305px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .home__tittle {
+      font-size: var(--h2-font-size);
+    }
+
+    .personalText {
+      width: 265px;
+    }
+
+    .aboutText {
+      margin-left: 15px;
+      width: 290px;
+    }
+  }
 }

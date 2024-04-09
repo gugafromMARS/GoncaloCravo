@@ -80,7 +80,7 @@ export const welcome = [
     className: "home__tittle",
   },
   {
-    text: "Developer🧑🏻‍💻",
+    text: "Developer",
     className: "home__tittle",
   },
 ];
