@@ -59,7 +59,7 @@ export default function About() {
                 <img src={gitIcon} alt="github" className="github mb-4" />
                 Github
               </a>
-              <a href={CV} download="" className="button cv-btn ml-8 mt-10">
+              <a href={CV} target="_blank" className="button cv-btn ml-8 mt-10">
                 Download CV
               </a>
             </div>
