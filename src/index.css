@@ -43,6 +43,31 @@
   }
 }
 
+@media (max-width: 1285px) {
+  .nav {
+    z-index: 100;
+  }
+
+  .home__description {
+    padding-right: 60px;
+  }
+
+  .personalText {
+    height: 400px;
+    width: 350px;
+    font-size: var(--small-font-size);
+  }
+
+  .aboutText {
+    margin-left: 50px;
+    width: 375px;
+  }
+
+  .cv-btn {
+    padding: 15px 5px;
+  }
+}
+
 @media (max-width: 768px) {
   .home {
     grid-template-columns: 1fr;

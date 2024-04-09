@@ -73,6 +73,17 @@ export const HeroParallax = ({
     cardHeight = "h-48";
     titleSize = "md:text-5xl";
     pSize = "md:text-lg";
+  } else if (window.matchMedia("(max-width: 1300px)").matches) {
+    firstRow = projects.slice(0, 1);
+    secondRow = projects.slice(1, 2);
+    thirdRow = projects.slice(2, 3);
+    fourthRow = projects.slice(3, 4);
+    fifthRow = projects.slice(4, 5);
+    sixthRow = projects.slice(5, 6);
+    seventhRow = projects.slice(6, 7);
+    cardHeight = "h-36";
+    titleSize = "md:text-5xl";
+    pSize = "md:text-lg";
   }
   return (
     <div
