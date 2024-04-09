@@ -26,7 +26,7 @@ export const HeroParallax = ({
   let fifthRow;
   let sixthRow;
   let seventhRow;
-  let cardHeight = 96;
+  let cardHeight = "h-96";
   let titleSize = "md:text-7xl";
   let pSize = "md:text-xl";
   const ref = React.useRef(null);
@@ -70,7 +70,7 @@ export const HeroParallax = ({
     fifthRow = projects.slice(4, 5);
     sixthRow = projects.slice(5, 6);
     seventhRow = projects.slice(6, 7);
-    cardHeight = 48;
+    cardHeight = "h-48";
     titleSize = "md:text-5xl";
     pSize = "md:text-lg";
   }
@@ -243,7 +243,7 @@ export const ProductCard = ({
     thumbnail: string;
   };
   translate: MotionValue<number>;
-  cardHeight: number;
+  cardHeight: string;
 }) => {
   return (
     <motion.div
@@ -254,7 +254,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className={`group/product h-${cardHeight} w-[30rem] relative flex-shrink-0`}
+      className={`group/product ${cardHeight} w-[30rem] relative flex-shrink-0`}
     >
       <a
         href={product.link}
