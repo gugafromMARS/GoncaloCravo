@@ -8,6 +8,7 @@ import Skills from "../../components/Skills";
 import Education from "../education/Education";
 import gitIcon from "../../assets/github-mark-white.svg";
 import LinkedinIcon from "../../assets/LinkedIn_icon.svg";
+import { Link } from "react-router-dom";
 
 export default function About() {
   let textSize = "md:text-7xl";
@@ -83,6 +84,11 @@ export default function About() {
           <Education />
         </div>
       </section>
+      <div className="port">
+        <Link to="/GoncaloCravo/portfolio" className="button port-btn">
+          Portfolio{" "}
+        </Link>
+      </div>
     </main>
   );
 }
