@@ -19,10 +19,16 @@ export const HeroParallax = ({
     thumbnail: string;
   }[];
 }) => {
-  const firstRow = projects.slice(0, 2);
-  const secondRow = projects.slice(2, 4);
-  const thirdRow = projects.slice(4, 6);
-  const fourthRow = projects.slice(6, 7);
+  let firstRow = projects.slice(0, 2);
+  let secondRow = projects.slice(2, 4);
+  let thirdRow = projects.slice(4, 6);
+  let fourthRow = projects.slice(6, 7);
+  let fifthRow;
+  let sixthRow;
+  let seventhRow;
+  let cardHeight = 96;
+  let titleSize = "md:text-7xl";
+  let pSize = "md:text-xl";
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -55,12 +61,25 @@ export const HeroParallax = ({
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
+
+  if (window.matchMedia("(max-width: 1200px)").matches) {
+    firstRow = projects.slice(0, 1);
+    secondRow = projects.slice(1, 2);
+    thirdRow = projects.slice(2, 3);
+    fourthRow = projects.slice(3, 4);
+    fifthRow = projects.slice(4, 5);
+    sixthRow = projects.slice(5, 6);
+    seventhRow = projects.slice(6, 7);
+    cardHeight = 48;
+    titleSize = "md:text-5xl";
+    pSize = "md:text-lg";
+  }
   return (
     <div
       ref={ref}
       className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
-      <Header />
+      <Header titleSize={titleSize} pSize={pSize} />
       <motion.div
         style={{
           rotateX,
@@ -70,52 +89,140 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-10">
-          {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row  mb-10 space-x-20 ">
-          {secondRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-10">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row space-x-20 ">
-          {fourthRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
+        {!seventhRow && (
+          <>
+            <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-10">
+              {firstRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateX}
+                  key={product.title}
+                  cardHeight={cardHeight}
+                />
+              ))}
+            </motion.div>
+            <motion.div className="flex flex-row  mb-10 space-x-20 ">
+              {secondRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateXReverse}
+                  key={product.title}
+                  cardHeight={cardHeight}
+                />
+              ))}
+            </motion.div>
+            <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-10">
+              {thirdRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateX}
+                  key={product.title}
+                  cardHeight={cardHeight}
+                />
+              ))}
+            </motion.div>
+            <motion.div className="flex flex-row space-x-20 ">
+              {fourthRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateXReverse}
+                  key={product.title}
+                  cardHeight={cardHeight}
+                />
+              ))}
+            </motion.div>
+          </>
+        )}
+        {seventhRow && (
+          <>
+            <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-10">
+              {firstRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateX}
+                  key={product.title}
+                  cardHeight={cardHeight}
+                />
+              ))}
+            </motion.div>
+            <motion.div className="flex flex-row  mb-10 space-x-20 ">
+              {secondRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateXReverse}
+                  key={product.title}
+                  cardHeight={cardHeight}
+                />
+              ))}
+            </motion.div>
+            <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-10">
+              {thirdRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateX}
+                  key={product.title}
+                  cardHeight={cardHeight}
+                />
+              ))}
+            </motion.div>
+            <motion.div className="flex flex-row space-x-20 ">
+              {fourthRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateXReverse}
+                  key={product.title}
+                  cardHeight={cardHeight}
+                />
+              ))}
+            </motion.div>
+            <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-10">
+              {fifthRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateX}
+                  key={product.title}
+                  cardHeight={cardHeight}
+                />
+              ))}
+            </motion.div>
+            <motion.div className="flex flex-row space-x-20 ">
+              {sixthRow.map((product) => (
+                <ProductCard
+                  product={product}
+                  translate={translateXReverse}
+                  key={product.title}
+                  cardHeight={cardHeight}
+                />
+              ))}
+            </motion.div>
+            <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-10">
+              {seventhRow.map((product) => {
+                const newProduct = {
+                  ...product,
+                  reversed: false,
+                };
+                return (
+                  <ProductCard
+                    product={newProduct}
+                    translate={translateX}
+                    key={product.title}
+                    cardHeight={cardHeight}
+                  />
+                );
+              })}
+            </motion.div>
+          </>
+        )}
       </motion.div>
     </div>
   );
 };
 
-export const Header = () => {
+export const Header = ({ titleSize, pSize }) => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold black">My Projects</h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 black">
+      <h1 className={`text-2xl ${titleSize} font-bold black`}>My Projects</h1>
+      <p className={`max-w-2xl text-base ${pSize} mt-8 black`}>
         Some of my projects I've done since I started the bootcamp, and others
         I've done myself and continue to build...
       </p>
@@ -126,6 +233,7 @@ export const Header = () => {
 export const ProductCard = ({
   product,
   translate,
+  cardHeight,
 }: {
   product: {
     title: string;
@@ -135,6 +243,7 @@ export const ProductCard = ({
     thumbnail: string;
   };
   translate: MotionValue<number>;
+  cardHeight: number;
 }) => {
   return (
     <motion.div
@@ -145,7 +254,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className={`group/product h-${cardHeight} w-[30rem] relative flex-shrink-0`}
     >
       <a
         href={product.link}

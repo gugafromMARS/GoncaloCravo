@@ -105,3 +105,9 @@
   padding: 15px 20px;
   height: 50px;
 }
+
+@media (max-width: 1200px) {
+  .aboutText {
+    margin-left: 6rem;
+  }
+}

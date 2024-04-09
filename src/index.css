@@ -1,3 +1,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (max-width: 1200px) {
+  .nav {
+    z-index: 100;
+  }
+
+  .home__data {
+    padding-right: 40px;
+  }
+
+  .home__tittle {
+    font-size: var(--big-font-size);
+  }
+
+  .home__description {
+    font-size: var(--small-font-size);
+    padding-right: 40px;
+  }
+
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    margin-bottom: 150px;
+  }
+
+  .personalText {
+    font-size: var(--small-font-size);
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 150px;
+  }
+
+  .projects {
+    padding: 100px;
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr;
+    row-gap: 0px;
+    justify-items: center;
+  }
+
+  .color__block {
+    right: -34%;
+  }
+
+  .home__img {
+    width: 270px;
+    height: 270px;
+    border-radius: 10%;
+    margin-top: auto;
+  }
+
+  .home__content {
+    max-width: 550px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .personalText {
+    height: 450px;
+    width: 350px;
+    font-size: var(--small-font-size);
+  }
+
+  .aboutText {
+    margin-left: 50px;
+    width: 375px;
+  }
+}

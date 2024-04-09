@@ -3,7 +3,7 @@ import { BackgroundGradient } from "../pages/ui/background-gradient";
 
 export default function AboutText() {
   return (
-    <BackgroundGradient className="p-2">
+    <BackgroundGradient className="p-2 ">
       <div className="personalText">
         <p>
           My name is Gonçalo Cravo, I have a Bachelor Degree in Management, but

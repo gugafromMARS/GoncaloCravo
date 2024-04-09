@@ -10,10 +10,18 @@ import gitIcon from "../../assets/github-mark-white.svg";
 import LinkedinIcon from "../../assets/LinkedIn_icon.svg";
 
 export default function About() {
+  let textSize = "md:text-7xl";
+  let marginLamp = "ml-36";
+  if (window.matchMedia("(max-width: 1200px)").matches) {
+    textSize = "md:text-6xl";
+  }
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    marginLamp = "ml-8";
+  }
   return (
     <main className="section container bg-black max-w-full">
       <section className="about">
-        <LampContainer className="">
+        <LampContainer>
           <motion.h1
             initial={{ opacity: 0.5, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +30,7 @@ export default function About() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="ml-36 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl "
+            className={`${marginLamp} bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent ${textSize}`}
           >
             About Me
           </motion.h1>

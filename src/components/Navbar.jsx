@@ -1,14 +1,10 @@
 import { links } from "../data.jsx";
 import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
-
-  function handleState() {
-    setShowMenu((prevState) => !prevState);
-  }
 
   return (
     <nav className="nav">

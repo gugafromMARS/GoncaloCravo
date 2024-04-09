@@ -6,9 +6,15 @@ import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 import { welcome } from "../../data";
 
 export default function Home() {
+  let glowSize = 4;
+
+  if (window.matchMedia("(max-width: 1200px)").matches) {
+    glowSize = 2;
+  }
+
   return (
     <section className="home section grid">
-      <BackgroundGradient className=" p-4">
+      <BackgroundGradient className={`p-${glowSize} `}>
         <img src={Photo} alt="" className="home__img" />
       </BackgroundGradient>
       <div className="home__content">

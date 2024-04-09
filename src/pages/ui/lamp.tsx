@@ -29,14 +29,25 @@ export const LampContainer = ({
   children: React.ReactNode;
   className?: string;
 }) => {
+  let widthContainer = "w-11/12";
+  let marginLamp = "ml-36";
+  if (window.matchMedia("(max-width: 1150px)").matches) {
+    widthContainer = "w-full";
+  }
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    marginLamp = "ml-8";
+  }
+
   return (
     <div
       className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-black w-11/12 rounded-md z-0",
+        `relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-black ${widthContainer} rounded-md z-0 `,
         className
       )}
     >
-      <div className="ml-36 relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0">
+      <div
+        className={`${marginLamp} relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0`}
+      >
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
           whileInView={{ opacity: 1, width: "30rem" }}
